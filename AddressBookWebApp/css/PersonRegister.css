@@ -21,7 +21,7 @@ body
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 0px solid green;
+    
     width: 80%;
     justify-content:start;
    
@@ -45,4 +45,94 @@ body
 {
     height: 50px;
     width: 40px;
+}
+.addressForm
+{
+    min-height: calc(100%-100px);
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form{
+    width: 65%;
+    background-color: white;
+    box-shadow: 5px solid lightgray;
+    border-radius: 8px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+.form_header
+{
+    letter-spacing: 0px;
+    border-radius: 8px 8px 0px 0px;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 19px;
+    background-color: sandybrown;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.cancel_icon
+{
+    height: 25px;
+    width: 25px;
+    float: right;
+    cursor: pointer;
+}
+.cancel_icon:hover
+{
+    transform: scale(1.5);
+}
+.form_input_content
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: left;
+    justify-content: center;
+    
+}
+.form_input_label
+{
+    min-width: 140px;
+    padding: 12px 12px 12px 4px;
+    display: inline-block;
+}
+.text
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    color: #42515f;
+    
+}
+.input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    background-color: lightcyan;
+    outline: none;
+}
+.input:focus
+{
+    
+    border:1px solid #42515f;
+}
+.form_contents
+{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid black;
 }
