@@ -30,7 +30,7 @@
                 src="../assets/icons/cancelIcon.png"
                 alt="cancel"
                 class="cancel_icon"
-            />
+                />
             </span>
             <div class="form_contents">
                 <div class="form_input_content">
@@ -38,7 +38,65 @@
                     <input type="text" class="input" name="personName" id="personName" placeholder="Enter Full Name Here" required>
                     <error class="error" id="errorName"></error>
                 </div>
+                <div class="form_input_content">
+                    <label class="form_input_label text" for="phoneNumber">Phone Number</label>
+                    <input type="number" class="input" name="phoneNumber" id="phoneNumber" placeholder="Enter PhoneNumber Here" required>
+                    <error class="error" id="errorPhoneNumber"></error>
+                </div>
+                <div class="form_input_content">
+                    <label class="form_input_label text" for="address">Address</label>
+                    <textarea rows="4" class="input" placeholder="Enter Address Here" id="address" style="resize: none;" required></textarea>
+                </div>
+                <div class="form_input_content">
+                    <!-- <label class="form_input_label text" for="startDate">Start Date</label> -->
+                    <table>
+                        <tr id="table_label">
+                            <td class="text">State</td>
+                            <td class="text">City</td>
+                            <td class="text">Zip Code</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="state" name="state">
+                                    <option value="">Select State</option>
+                                    <option value="tamilNadu">Tamil Nadu</option>
+                                    <option value="kerala">Kerala</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="andhraPradesh">Andhra Pradesh</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="telungana">Telungana</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="city" name="city">
+                                    <option value="">Select City</option>
+                                    <option value="chennai">Chennai</option>
+                                    <option value="madurai">Madurai</option>
+                                    <option value="coimbatore">Coimbatore</option>
+                                    <option value="kochin">Kochin</option>
+                                    <option value="wayanad">Wayanad</option>
+                                    <option value="banglore">Banglore</option>
+                                    <option value="mysore">Mysore</option>
+                                    <option value="hyderabad">Hyderabad</option>
+                                    <option value="mumbai">Mumbai</option>
+                                    <option value="andheri">Andheri</option>
+                                    <option value="vijayawada">Vijayawada</option>
+                                    <option value="munnar">Munnar</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" class="input" name="zipCode" id="zipCode" placeholder="Enter Zip Code Here" required>
+                                <error class="error" id="errorzipCode"></error>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="buttons">
+                    <button type="reset" class="reset_button button">Reset</button>
+                    <button type="submit" class="submit_button Right" id="submitButton">Submit</button>
+                </div>
             </div>
+            
         </form>
     </div>
 </body>
