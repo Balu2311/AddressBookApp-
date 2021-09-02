@@ -9,6 +9,7 @@
     <title>Address Book</title>
 </head>
 <body>
+    <!--header-->
     <header class="header">
         <div class="logo">
             <img
@@ -22,5 +23,24 @@
             </div>
         </div>
     </header>
+    <!--header_container-->
+    <div class="Main_Container">
+        <div class="header_container">
+            <span class="header_text">
+                Person Details<span class="person_count" id="personCount">10</span>
+            </span>
+            <a href="./PersonRegister.html" class="add_button">
+                <img src="../assets/icons/add-24px.svg" class="icons" />Add Person
+            </a>
+        </div>
+        <!--Tables-->
+        <div style="overflow-x:auto;">
+            <table id="display_container" class="table">
+            </table>
+        </div>
+        
+    </div>
+    <!--Js Files-->
+    <script src="../js/HomePage.js"></script>
 </body>
 </html>
