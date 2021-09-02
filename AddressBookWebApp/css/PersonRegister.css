@@ -4,8 +4,12 @@
 body
 {
     margin: 0;
-    height: 100%;
+   min-height: 100%;
     
+}
+.addressForm
+{
+    height: 100%;
 }
 .header
 {
@@ -135,9 +139,17 @@ body
     width: 70%;
     justify-content: center;
     margin: 0 auto;
-    border: 2px solid black;
 }
-select
+.phNo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.phNo>input{
+    margin-left: 5px;
+}
+.selects
 {
     padding: 5px 12px 5px 12px;
     border:1px solid #ccc;
@@ -147,7 +159,16 @@ select
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #42515f;
     background-color: transparent;
-    min-width: 100px;
+    min-width: 130px;
+    outline: none;
+}
+.countryCode
+{
+    border:1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: transparent;
     outline: none;
 }
 .button
@@ -170,16 +191,34 @@ select
 {
     transform: scale(1.1);
 }
-
 .submit_button
 {
     background: green;
+    font-weight: 400;
+    min-width: 100px;
+    padding: 7px 7px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    float: left;
+    margin-left: 10%;
 
 }
 .reset_button
 {
     background: rgba(128, 128, 128, 0.898);
     margin-left:10px ;
+}
+.error
+{
+    color: red;
+    font-style: italic;
+    font-size: 15px;
+}
+.zipCodeclass
+{
+    display: flex;
+    flex-direction: column;
 }
 @media only screen and (max-width: 700px) {
     .form{

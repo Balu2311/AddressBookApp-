@@ -23,14 +23,14 @@
         </div>
     </header>
     <div class="addressForm">
-        <form class="form" action="#">
+        <form class="form" action="#" onsubmit="save();return false;" onreset="resetForm() ;return false;">
             <span class="form_header">
                 <h2>Person Address Form</h2>
                 <img
                 src="../assets/icons/cancelIcon.png"
                 alt="cancel"
                 class="cancel_icon"
-                />
+            />
             </span>
             <div class="form_contents">
                 <div class="form_input_content">
@@ -40,7 +40,17 @@
                 </div>
                 <div class="form_input_content">
                     <label class="form_input_label text" for="phoneNumber">Phone Number</label>
+                    <div class="phNo">
+                        <select id="countryCode" name="countryCode" class="countryCode">
+                            <option value="+91">+91</option>
+                            <option value="+81">+81</option>
+                            <option value="044">+044</option>
+                            <option value="+23">+23</option>
+                            <option value="+80">+80</option>
+                            <option value="+32">+32</option>
+                        </select>
                     <input type="number" class="input" name="phoneNumber" id="phoneNumber" placeholder="Enter PhoneNumber Here" required>
+                    </div>
                     <error class="error" id="errorPhoneNumber"></error>
                 </div>
                 <div class="form_input_content">
@@ -57,7 +67,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <select id="state" name="state">
+                                <select id="state" name="state" class="selects" required>
                                     <option value="">Select State</option>
                                     <option value="tamilNadu">Tamil Nadu</option>
                                     <option value="kerala">Kerala</option>
@@ -68,36 +78,28 @@
                                 </select>
                             </td>
                             <td>
-                                <select id="city" name="city">
+                                <select id="city" name="city" class="selects" required>
                                     <option value="">Select City</option>
-                                    <option value="chennai">Chennai</option>
-                                    <option value="madurai">Madurai</option>
-                                    <option value="coimbatore">Coimbatore</option>
-                                    <option value="kochin">Kochin</option>
-                                    <option value="wayanad">Wayanad</option>
-                                    <option value="banglore">Banglore</option>
-                                    <option value="mysore">Mysore</option>
-                                    <option value="hyderabad">Hyderabad</option>
-                                    <option value="mumbai">Mumbai</option>
-                                    <option value="andheri">Andheri</option>
-                                    <option value="vijayawada">Vijayawada</option>
-                                    <option value="munnar">Munnar</option>
                                 </select>
                             </td>
                             <td>
-                                <input type="number" class="input" name="zipCode" id="zipCode" placeholder="Enter Zip Code Here" required>
-                                <error class="error" id="errorzipCode"></error>
+                                <div class="zipCodeclass">
+                                    <input type="text" class="input" name="zipCode" id="zipCode" placeholder="Enter Zip Code Here" required>
+                                    <error class="error" id="errorzipCode"></error>
+                                </div>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="buttons">
                     <button type="reset" class="reset_button button">Reset</button>
-                    <button type="submit" class="submit_button Right" id="submitButton">Submit</button>
+                    <button type="submit" class="submit_button button" id="submitButton">Submit</button>
                 </div>
             </div>
             
         </form>
     </div>
+    <script src="../js/utility.js"></script>
+    <script src="../js/PersonRegister.js"></script>
 </body>
 </html>
