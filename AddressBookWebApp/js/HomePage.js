@@ -40,3 +40,15 @@ let tableContents = `${tableHeader}`;
     
     document.getElementById('display_container').innerHTML = tableContents;
 }
+//Delete Person
+let deletePerson = (person) =>
+{
+    let personData  = addressBookList.find(x => x.id == person.id);
+    if(!personData)
+        return;
+    const index = addressBookList.map(x => x.id).indexOf(personData.id);
+    addressBookList.splice(index,1);
+    localStorage.setItem("addressBookList",JSON.stringify(addressBookList));
+    document.getElementById('personCount').innerHTML = addressBookList.length;
+    createTableContents();
+}
