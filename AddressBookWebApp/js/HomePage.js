@@ -52,3 +52,12 @@ let deletePerson = (person) =>
     document.getElementById('personCount').innerHTML = addressBookList.length;
     createTableContents();
 }
+//Update person
+let updatePerson = (person) =>
+{
+    let personData  = addressBookList.find(x => x.id == person.id);
+    if(!personData)
+        return;
+    localStorage.setItem("editPerson",JSON.stringify(personData));
+    window.location.replace(siteProperties.register_page);
+}
